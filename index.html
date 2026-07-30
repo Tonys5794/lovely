@@ -109,9 +109,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,245,250,.94);backdro
 
 .price{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
 .price.best{border-color:var(--gold);box-shadow:0 12px 40px rgba(224,180,85,.2);position:relative}
-.price.best::before{content:"Выгоднее всего";position:absolute;top:-12px;left:22px;background:var(--gold);color:#22200f;
+.price.best::before{content:"Для постоянных мастеров";position:absolute;top:-12px;left:22px;background:var(--gold);color:#22200f;
   font-size:10px;font-weight:700;padding:6px 14px;border-radius:100px;letter-spacing:.14em;text-transform:uppercase}
-.price .sum{font-family:var(--serif);font-size:36px;margin:6px 0 2px;color:var(--navy)}
+.price .sum{font-family:var(--serif);font-size:36px;margin:6px 0 2px;color:var(--navy);line-height:1.15}
+.price.best .sum{font-size:30px}
 .price .sum small{font-size:15px;color:var(--muted)}
 .price ul{list-style:none;padding:0;margin:16px 0 22px;font-size:15px}
 .price li{padding:7px 0 7px 25px;position:relative;border-bottom:1px dashed var(--line);color:#333c5c}
@@ -268,7 +269,7 @@ footer .bot{border-top:1px solid #222c52;padding-top:18px;display:flex;justify-c
     <span class="tag">Прозрачно</span>
     <h2>Сколько стоит</h2>
     <p class="lead" style="margin-bottom:30px">Почасовая аренда — платите ровно за то время, что принимаете
-      клиентов. Для тех, кто выходит регулярно, условия обсуждаем индивидуально.</p>
+      клиентов. Для тех, кто выходит регулярно, условия обсуждаем лично.</p>
     <div class="grid g3">
       <div class="price">
         <h3>Час работы</h3>
@@ -279,9 +280,9 @@ footer .bot{border-top:1px solid #222c52;padding-top:18px;display:flex;justify-c
       </div>
       <div class="price best">
         <h3>Регулярная аренда</h3>
-        <div class="sum">от 120 ₽ <small>/ час</small></div>
+        <div class="sum">По договорённости</div>
         <p style="color:var(--muted);font-size:14px;margin:0">Если выходите несколько раз в неделю</p>
-        <ul><li>Своё привычное место</li><li>Цена ниже почасовой</li><li>График согласуем заранее</li>
+        <ul><li>Своё привычное место</li><li>График согласуем заранее</li>
           <li>Условия обсуждаем индивидуально</li></ul>
         <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn gold">Обсудить условия</a>
       </div>
@@ -371,7 +372,7 @@ footer .bot{border-top:1px solid #222c52;padding-top:18px;display:flex;justify-c
       <details open><summary>Какая минимальная аренда?</summary>
         <p>Один час — 150 ₽. Можно брать столько часов, сколько идёт процедура.</p></details>
       <details><summary>А если я работаю несколько раз в неделю?</summary>
-        <p>Тогда цена ниже — от 120 ₽ в час. Условия под вашу загрузку обсуждаем лично, напишите в WhatsApp.</p></details>
+        <p>Условия под вашу загрузку обсуждаем индивидуально — напишите в WhatsApp, договоримся.</p></details>
       <details><summary>Что входит в аренду?</summary>
         <p>Полностью оборудованное рабочее место: мебель, освещение и техника для вашей зоны.
           Материалы и инструмент — ваши.</p></details>
