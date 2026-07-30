@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NL&amp;LOVELY — бьюти-коворкинг в Екатеринбурге | рабочее место от 150 ₽ в час</title>
+<meta name="description" content="Аренда рабочих мест для мастеров: маникюр, педикюр, визаж, парикмахер, лешмейкер, косметолог, подолог, массаж. Екатеринбург, Челюскинцев 64А. От 150 ₽ в час, кабинет от 10 000 ₽ в месяц.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NL&amp;LOVELY — бьюти-коворкинг в Екатеринбурге">
+<meta property="og:description" content="Оборудованное рабочее место для мастера от 150 ₽ в час. Челюскинцев 64А, рядом с Динамо. Кабинет целиком — 10 000 ₽ в месяц.">
+<meta property="og:image" content="images/hero.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231b2a5e'/><text x='32' y='43' font-size='26' font-family='Georgia,serif' text-anchor='middle' fill='%23e8c46a'>NL</text></svg>">
+
+<style>
+:root{
+  /* палитра снята с их интерьера: синие стены, жёлтые лампы, чёрные кресла */
+  --bg:#f4f5fa; --bg2:#ffffff; --ink:#1b2340; --muted:#7c85a3;
+  --navy:#1b2a5e; --navy-d:#111a3d;
+  --gold:#e0b455; --gold-d:#c79a3c;
+  --line:#e3e7f2; --ok:#3f8f68;
+  --radius:16px; --wrap:1180px;
+  --shadow:0 14px 46px rgba(20,30,80,.12);
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+h1,h2,h3{font-family:var(--serif);line-height:1.18;margin:0 0 14px;font-weight:400;color:var(--navy)}
+h1{font-size:clamp(32px,5vw,54px);letter-spacing:.01em}
+h2{font-size:clamp(25px,3.3vw,38px)}
+h3{font-size:19px;margin-bottom:8px}
+h2::after{content:"";display:block;margin-top:15px;width:170px;height:6px;
+  background:linear-gradient(var(--line),var(--line)) left center/70px 1px no-repeat,
+    radial-gradient(circle 3px at 86px 3px, var(--gold) 99%, transparent),
+    linear-gradient(var(--line),var(--line)) right center/70px 1px no-repeat}
+p{margin:0 0 14px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold-d);font-weight:700;margin-bottom:13px}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+.btn{display:inline-block;padding:15px 30px;border-radius:100px;font-weight:600;font-size:14.5px;
+  border:1px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;transition:.18s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(27,42,94,.28)}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#22200f}
+.btn.gold:hover{background:var(--gold-d);border-color:var(--gold-d)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(244,245,250,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--serif);font-size:25px;letter-spacing:.08em;color:var(--navy)}
+.logo b{color:var(--gold-d);font-weight:400}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{font-size:14px;font-weight:600;color:var(--muted)}
+.menu a:hover{color:var(--navy)}
+.burger{display:none;font-size:26px;background:none;border:0;cursor:pointer;color:var(--navy)}
+@media(max-width:900px){
+  .menu{position:fixed;inset:70px 0 auto 0;background:var(--bg2);flex-direction:column;padding:22px;gap:18px;
+    border-bottom:1px solid var(--line);display:none;box-shadow:var(--shadow)}
+  .menu.open{display:flex}.menu a{font-size:17px;color:var(--ink)}.burger{display:block}
+}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:60px 0 40px;position:relative}
+.hero::before{content:"";position:absolute;right:-40px;top:-30px;width:330px;height:310px;background:#e6eaf6;
+  opacity:.85;z-index:-1;border-radius:58% 42% 47% 53%/46% 52% 48% 54%}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:32px}.hero::before{display:none}}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-note{margin-top:16px;font-size:14px;color:var(--muted)}
+.hero-photo{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-photo>img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:46%;
+  background:linear-gradient(to top,rgba(12,20,52,.8),transparent)}
+.hero-badge{position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.34);color:#fff;border-radius:30px;padding:7px 15px;font-size:12px;font-weight:600;
+  display:flex;align-items:center;gap:7px}
+.hero-badge i{width:8px;height:8px;border-radius:50%;background:#7ee2a8;box-shadow:0 0 0 4px rgba(126,226,168,.25)}
+.hero-cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
+.hero-cap b{font-family:var(--serif);font-size:22px;display:block}
+.hero-cap span{font-size:13px;color:#d4dcf5}
+
+.strip{background:var(--navy);color:#e9edf9;padding:14px 0;overflow:hidden;white-space:nowrap;letter-spacing:.06em}
+.strip .row{display:inline-flex;gap:38px;animation:mv 28s linear infinite;font-size:13px;font-weight:500}
+.strip .row span::before{content:"• ";color:var(--gold)}
+@keyframes mv{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .ico{font-size:26px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px;margin:0}
+
+.spot{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px;align-items:center}
+.spot img{aspect-ratio:1;border-radius:12px;object-fit:cover;width:100%;height:100%}
+.spot .p{font-weight:800;color:var(--gold-d);font-size:15px;margin-top:5px}
+@media(max-width:620px){.spot{grid-template-columns:92px 1fr}}
+
+.price{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+.price.best{border-color:var(--gold);box-shadow:0 12px 40px rgba(224,180,85,.2);position:relative}
+.price.best::before{content:"Выгоднее всего";position:absolute;top:-12px;left:22px;background:var(--gold);color:#22200f;
+  font-size:10px;font-weight:700;padding:6px 14px;border-radius:100px;letter-spacing:.14em;text-transform:uppercase}
+.price .sum{font-family:var(--serif);font-size:36px;margin:6px 0 2px;color:var(--navy)}
+.price .sum small{font-size:15px;color:var(--muted)}
+.price ul{list-style:none;padding:0;margin:16px 0 22px;font-size:15px}
+.price li{padding:7px 0 7px 25px;position:relative;border-bottom:1px dashed var(--line);color:#333c5c}
+.price li:last-child{border:0}
+.price li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+.price .btn{margin-top:auto}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal img{aspect-ratio:1;border-radius:14px;object-fit:cover;width:100%;height:100%}
+.gal img:nth-child(1){grid-column:span 2;grid-row:span 2}
+@media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.step .n{position:absolute;top:-16px;left:22px;width:36px;height:36px;border-radius:50%;background:var(--bg2);
+  border:1px solid var(--gold);color:var(--gold-d);display:grid;place-items:center;font-family:var(--serif);font-size:17px}
+.step h3{margin-top:12px}
+
+details{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+details[open]{border-color:var(--gold)}
+summary{cursor:pointer;font-weight:700;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold-d);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--muted);font-size:15px}
+
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+@media(max-width:900px){.form-wrap{grid-template-columns:1fr}}
+form{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;
+  font-size:15px;background:#fbfcff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:86px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;margin:16px 0 4px;font-size:13px;color:var(--muted)}
+.check input{width:18px;height:18px;flex:0 0 auto;margin-top:2px}
+form .btn{width:100%;margin-top:16px}
+.hp{position:absolute;left:-9999px}
+.done{display:none;margin-top:14px;padding:14px;border-radius:10px;background:#e9f6ee;color:#1d6b33;font-weight:600;font-size:15px}
+.err{color:#c62828;font-size:13px;margin-top:6px;display:none}
+.contacts{display:grid;gap:14px}
+.crow{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}
+.crow .ic{font-size:20px}
+.crow b{display:block;font-size:14px}
+.crow span{color:var(--muted);font-size:15px}
+.crow a{color:var(--gold-d);font-weight:700}
+.map{margin-top:18px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9}
+.map iframe{width:100%;height:100%;border:0;display:block}
+
+.final{background:var(--navy);color:#e7ecfa;border-radius:22px;padding:52px 40px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;left:-60px;bottom:-80px;width:250px;height:230px;
+  background:rgba(224,180,85,.16);border-radius:58% 42% 47% 53%/46% 52% 48% 54%}
+.final h2{color:#fff;position:relative}
+.final h2::after{margin:15px auto 0;
+  background:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25)) left center/70px 1px no-repeat,
+    radial-gradient(circle 3px at 86px 3px, var(--gold) 99%, transparent),
+    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25)) right center/70px 1px no-repeat}
+.final p{color:#bcc6e4;max-width:540px;margin:0 auto 24px;position:relative}
+.final .btn{position:relative}
+@media(max-width:620px){.final{padding:38px 22px}}
+
+footer{background:var(--navy-d);color:#a9b3d2;padding:44px 0 26px;font-size:14px}
+footer .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+footer a:hover{color:#fff}
+footer .soc{display:flex;gap:14px}
+footer .bot{border-top:1px solid #222c52;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+
+.cookie{position:fixed;left:14px;right:14px;bottom:14px;z-index:80;background:#fff;border:1px solid var(--line);
+  box-shadow:var(--shadow);border-radius:14px;padding:16px 18px;display:none;gap:14px;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;font-size:14px}
+.cookie.show{display:flex}
+.cookie .btn{padding:10px 20px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">NL<b>&amp;</b>LOVELY</a>
+    <nav class="menu" id="menu">
+      <a href="#places">Места</a>
+      <a href="#prices">Цены</a>
+      <a href="#gallery">Пространство</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#apply" class="btn gold" style="padding:11px 20px">Забронировать место</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<!-- ============ ГЕРОЙ ============ -->
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="tag">Бьюти-коворкинг · Екатеринбург, Челюскинцев 64А</span>
+      <h1>Оборудованное рабочее место — от 150 ₽ в час</h1>
+      <p class="lead">Приходите со своими клиентами: зона маникюра, педикюра, визажа и отдельные кабинеты уже
+        готовы к работе. Платите за часы, которые реально работаете, — не за пустую аренду помещения.</p>
+      <div class="cta">
+        <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn gold">Написать в WhatsApp</a>
+        <a href="#prices" class="btn ghost">Посмотреть цены</a>
+      </div>
+      <div class="hero-note">Рейтинг 5,0 · 39 оценок · работаем до 22:00 · 570 м от метро «Динамо»</div>
+    </div>
+    <!-- ФОТО: замени images/hero.jpg на реальный кадр их пространства (синие стены, жёлтые лампы) -->
+    <div class="hero-photo">
+      <img src="images/hero.jpg" alt="Рабочее пространство бьюти-коворкинга NL&amp;LOVELY">
+      <div class="hero-badge"><i></i>Свободные места есть</div>
+      <div class="hero-cap"><b>NL&amp;LOVELY</b><span>Маникюр · педикюр · визаж · брови · парикмахер · косметолог</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="row">
+    <span>От 1 часа</span><span>150 ₽ в час</span><span>Кабинет 10 000 ₽ в месяц</span><span>Центр, Челюскинцев 64А</span>
+    <span>Рейтинг 5,0</span><span>Работаем до 22:00</span><span>Оборудованные места</span>
+    <span>От 1 часа</span><span>150 ₽ в час</span><span>Кабинет 10 000 ₽ в месяц</span><span>Центр, Челюскинцев 64А</span>
+    <span>Рейтинг 5,0</span><span>Работаем до 22:00</span><span>Оборудованные места</span>
+  </div>
+</div>
+
+<!-- ============ МЕСТА ============ -->
+<section id="places">
+  <div class="wrap">
+    <span class="tag">Что можно арендовать</span>
+    <h2>Рабочие зоны и кабинеты</h2>
+    <p class="lead" style="margin-bottom:28px">В аренду входит полностью оборудованное рабочее место — мебель,
+      свет и техника. Вы приносите только инструмент и материалы.</p>
+    <div class="grid g2">
+      <div class="spot"><img src="images/m-nails.jpg" alt="Зона маникюра" loading="lazy">
+        <div><h3>Зона маникюра</h3>
+          <p style="color:var(--muted);font-size:15px;margin:0">Стол с вытяжкой, лампа, кресло для клиента.</p>
+          <div class="p">150 ₽ / час</div></div></div>
+      <div class="spot"><img src="images/m-pedi.jpg" alt="Зона педикюра" loading="lazy">
+        <div><h3>Зона педикюра</h3>
+          <p style="color:var(--muted);font-size:15px;margin:0">Педикюрное кресло с подставкой и подсветкой.</p>
+          <div class="p">150 ₽ / час</div></div></div>
+      <div class="spot"><img src="images/m-brows.jpg" alt="Зона визажиста и бровиста" loading="lazy">
+        <div><h3>Зона визажиста и бровиста</h3>
+          <p style="color:var(--muted);font-size:15px;margin:0">Гримёрное зеркало с подсветкой, кресло-реклайнер.</p>
+          <div class="p">150 ₽ / час</div></div></div>
+      <div class="spot"><img src="images/m-hair.jpg" alt="Кабинет целиком" loading="lazy">
+        <div><h3>Кабинет целиком</h3>
+          <p style="color:var(--muted);font-size:15px;margin:0">Отдельная комната для косметолога, подолога,
+            массажиста или парикмахера.</p>
+          <div class="p">10 000 ₽ / месяц</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЦЕНЫ ============ -->
+<section id="prices" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="tag">Прозрачно</span>
+    <h2>Сколько стоит</h2>
+    <p class="lead" style="margin-bottom:30px">Почасовая аренда — платите ровно за то время, что принимаете
+      клиентов. Для тех, кто выходит регулярно, условия обсуждаем индивидуально.</p>
+    <div class="grid g3">
+      <div class="price">
+        <h3>Час работы</h3>
+        <div class="sum">150 ₽ <small>/ 1 час</small></div>
+        <p style="color:var(--muted);font-size:14px;margin:0">Попробовать или принять одного клиента</p>
+        <ul><li>Любая свободная зона</li><li>Оборудованное место</li><li>Бронь по звонку или в WhatsApp</li></ul>
+        <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn ghost">Забронировать час</a>
+      </div>
+      <div class="price best">
+        <h3>Регулярная аренда</h3>
+        <div class="sum">от 120 ₽ <small>/ час</small></div>
+        <p style="color:var(--muted);font-size:14px;margin:0">Если выходите несколько раз в неделю</p>
+        <ul><li>Своё привычное место</li><li>Цена ниже почасовой</li><li>График согласуем заранее</li>
+          <li>Условия обсуждаем индивидуально</li></ul>
+        <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn gold">Обсудить условия</a>
+      </div>
+      <div class="price">
+        <h3>Кабинет целиком</h3>
+        <div class="sum">10 000 ₽ <small>/ месяц</small></div>
+        <p style="color:var(--muted);font-size:14px;margin:0">Для косметолога, подолога, массажиста</p>
+        <ul><li>Отдельная закрытая комната</li><li>Свой график работы</li><li>Место под аппараты и препараты</li></ul>
+        <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn ghost">Узнать про кабинет</a>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:14px;color:var(--muted)">Ищем в команду парикмахера-универсала, мастера
+      ногтевого сервиса и лешмейкера — выход под запись, условия обсуждаем лично.</p>
+  </div>
+</section>
+
+<!-- ============ УСЛОВИЯ ============
+     СВЕРИТЬ С КЛИЕНТОМ: стерильность, расходники, хранение инструмента, парковка. -->
+<section id="included">
+  <div class="wrap">
+    <span class="tag">Условия</span>
+    <h2>Как всё устроено</h2>
+    <div class="grid g4" style="margin-top:24px">
+      <div class="card"><div class="ico">🕐</div><h3>Аренда от часа</h3>
+        <p>Взяли два часа под две записи — заплатили за два часа, а не за весь день.</p></div>
+      <div class="card"><div class="ico">📍</div><h3>Центр города</h3>
+        <p>Челюскинцев 64А, 570 метров от метро «Динамо». Клиенту легко объяснить дорогу.</p></div>
+      <div class="card"><div class="ico">🪑</div><h3>Место готово к работе</h3>
+        <p>Мебель, свет и техника уже стоят. Приносите инструмент и материалы.</p></div>
+      <div class="card"><div class="ico">🌙</div><h3>Работаем до 22:00</h3>
+        <p>Можно брать вечерние часы и совмещать с основной работой.</p></div>
+      <div class="card"><div class="ico">⭐</div><h3>Рейтинг 5,0</h3>
+        <p>39 оценок и 31 отзыв на картах — мастера и клиенты возвращаются.</p></div>
+      <div class="card"><div class="ico">🤝</div><h3>Для всех направлений</h3>
+        <p>Косметологи, подологи, массажисты, визажисты, парикмахеры, лешмейкеры, мастера ногтевого сервиса.</p></div>
+      <div class="card"><div class="ico">💬</div><h3>Ответим быстро</h3>
+        <p>WhatsApp и Telegram — пишите в любое время, договоримся о просмотре.</p></div>
+      <div class="card"><div class="ico">🚪</div><h3>Есть свободные места</h3>
+        <p>Сейчас доступны зоны и кабинеты — уточните, что свободно на вашу дату.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ГАЛЕРЕЯ ============ -->
+<section id="gallery" style="background:var(--bg2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <span class="tag">Посмотрите</span>
+    <h2>Пространство</h2>
+    <p class="lead" style="margin-bottom:24px">Мастер видит, где будет работать, ещё до брони — а клиент
+      понимает, что придёт в салон, а не в квартиру.</p>
+    <!-- ФОТО: заменить на реальные кадры из их группы ВКонтакте -->
+    <div class="gal">
+      <img src="images/about.jpg" alt="Зал коворкинга" loading="lazy">
+      <img src="images/gal1.jpg" alt="Рабочее место" loading="lazy">
+      <img src="images/gal2.jpg" alt="Зона маникюра" loading="lazy">
+      <img src="images/gal3.jpg" alt="Кабинет" loading="lazy">
+      <img src="images/m-brows.jpg" alt="Зона визажиста" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ШАГИ ============ -->
+<section>
+  <div class="wrap">
+    <span class="tag">Три шага</span>
+    <h2>Как начать работать</h2>
+    <div class="grid g3" style="margin-top:32px">
+      <div class="step"><div class="n">1</div><h3>Пишете нам</h3>
+        <p style="color:var(--muted);margin:0">В WhatsApp или Telegram: направление и удобные дни.
+          Расскажем, что свободно.</p></div>
+      <div class="step"><div class="n">2</div><h3>Приходите смотреть</h3>
+        <p style="color:var(--muted);margin:0">Показываем зону или кабинет, обсуждаем график и цену
+          под вашу загрузку.</p></div>
+      <div class="step"><div class="n">3</div><h3>Выходите к клиентам</h3>
+        <p style="color:var(--muted);margin:0">Бронируете часы под свои записи. Дальше — работаете
+          в своём ритме.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:var(--bg2);border-top:1px solid var(--line)">
+  <div class="wrap" style="max-width:840px">
+    <span class="tag">Отвечаем заранее</span>
+    <h2>Частые вопросы</h2>
+    <div style="margin-top:24px">
+      <details open><summary>Какая минимальная аренда?</summary>
+        <p>Один час — 150 ₽. Можно брать столько часов, сколько идёт процедура.</p></details>
+      <details><summary>А если я работаю несколько раз в неделю?</summary>
+        <p>Тогда цена ниже — от 120 ₽ в час. Условия под вашу загрузку обсуждаем лично, напишите в WhatsApp.</p></details>
+      <details><summary>Что входит в аренду?</summary>
+        <p>Полностью оборудованное рабочее место: мебель, освещение и техника для вашей зоны.
+          Материалы и инструмент — ваши.</p></details>
+      <details><summary>Для каких мастеров подходит?</summary>
+        <p>Косметологи, подологи, массажисты, визажисты, парикмахеры, лешмейкеры, мастера маникюра и педикюра.</p></details>
+      <details><summary>Где вы находитесь?</summary>
+        <p>Екатеринбург, улица Челюскинцев, 64А — 570 метров от метро «Динамо». Работаем до 22:00.</p></details>
+      <details><summary>Можно арендовать кабинет целиком?</summary>
+        <p>Да, отдельная комната — 10 000 ₽ в месяц. Подходит косметологу, подологу или массажисту,
+          которому нужна приватность.</p></details>
+      <details><summary>Вы ищете мастеров в команду?</summary>
+        <p>Да: парикмахер-универсал, мастер ногтевого сервиса и лешмейкер — выход под запись.
+          Условия обсуждаем индивидуально.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЗАЯВКА ============ -->
+<section id="apply">
+  <div class="wrap">
+    <span class="tag">Свободные места есть</span>
+    <h2>Записаться на просмотр</h2>
+    <p class="lead" style="margin-bottom:28px">Оставьте заявку — расскажем, что свободно, покажем место
+      и обсудим цену под ваш график.</p>
+
+    <div class="form-wrap">
+      <form id="lead" novalidate>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label for="nm">Как вас зовут</label>
+        <input id="nm" name="name" type="text" placeholder="Имя" required>
+
+        <label for="ph">Телефон или ник в Telegram</label>
+        <input id="ph" name="phone" type="text" placeholder="+7 912 207-76-75" required>
+        <div class="err" id="err">Заполните имя и телефон — иначе мы не сможем ответить.</div>
+
+        <label for="dir">Направление</label>
+        <select id="dir" name="direction">
+          <option>Маникюр / педикюр</option>
+          <option>Брови и ресницы</option>
+          <option>Визаж</option>
+          <option>Парикмахер</option>
+          <option>Косметолог</option>
+          <option>Подолог / массаж</option>
+          <option>Другое</option>
+        </select>
+
+        <label for="fmt">Что интересует</label>
+        <select id="fmt" name="format">
+          <option>Аренда по часам</option>
+          <option>Регулярная аренда</option>
+          <option>Кабинет на месяц</option>
+          <option>Работа в команде (вакансия)</option>
+        </select>
+
+        <label for="cm">Комментарий (необязательно)</label>
+        <textarea id="cm" name="comment" placeholder="Удобные дни и время, сколько клиентов в неделю"></textarea>
+
+        <label class="check">
+          <input type="checkbox" id="agree" required>
+          <span>Согласен на обработку персональных данных и принимаю
+            <a href="policy.html" style="color:var(--gold-d);font-weight:700">Политику конфиденциальности</a></span>
+        </label>
+
+        <button type="submit" class="btn gold">Отправить заявку</button>
+        <div class="done" id="done">Спасибо! Заявка у нас — ответим в ближайшее время.</div>
+      </form>
+
+      <div>
+        <div class="contacts">
+          <div class="crow"><div class="ic">📍</div><div><b>Адрес</b>
+            <span>Екатеринбург, улица Челюскинцев, 64А · 570 м от метро «Динамо»</span></div></div>
+          <div class="crow"><div class="ic">📞</div><div><b>Телефон и WhatsApp</b>
+            <span><a href="tel:+79122077675">+7 (912) 207-76-75</a> ·
+              <a href="https://wa.me/79122077675" target="_blank" rel="noopener">написать в WhatsApp</a></span></div></div>
+          <div class="crow"><div class="ic">💬</div><div><b>Telegram</b>
+            <span><a href="https://t.me/olesya_7233" target="_blank" rel="noopener">@olesya_7233</a></span></div></div>
+          <div class="crow"><div class="ic">🌐</div><div><b>ВКонтакте</b>
+            <span><a href="https://vk.com/nl_lovely_ekb" target="_blank" rel="noopener">vk.com/nl_lovely_ekb</a></span></div></div>
+          <div class="crow"><div class="ic">🕐</div><div><b>Режим работы</b>
+            <span>Ежедневно, до 22:00</span></div></div>
+        </div>
+        <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=60.596784%2C56.851732&z=17&pt=60.596784,56.851732,pm2rdm"
+                  loading="lazy" title="NL&amp;LOVELY на карте — Челюскинцев 64А" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФИНАЛ ============ -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Час работы — 150 ₽</h2>
+      <p>Дешевле, чем отдавать салону процент с каждого чека. Напишите — расскажем, что свободно на этой неделе.</p>
+      <a href="https://wa.me/79122077675" target="_blank" rel="noopener" class="btn gold">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:8px">NL<b style="color:#e0b455">&amp;</b>LOVELY</div>
+        <div>Бьюти-коворкинг в Екатеринбурге<br>улица Челюскинцев, 64А</div>
+      </div>
+      <div>
+        <b style="color:#fff;display:block;margin-bottom:8px">Разделы</b>
+        <a href="#places">Места</a> · <a href="#prices">Цены</a> ·
+        <a href="#faq">Вопросы</a> · <a href="#apply">Заявка</a>
+      </div>
+      <div>
+        <b style="color:#fff;display:block;margin-bottom:8px">Мы в сети</b>
+        <div class="soc">
+          <a href="https://vk.com/nl_lovely_ekb" target="_blank" rel="noopener">ВКонтакте</a>
+          <a href="https://wa.me/79122077675" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/olesya_7233" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="bot">
+      <span>© 2026 NL&amp;LOVELY · бьюти-коворкинг · Екатеринбург</span>
+      <a href="policy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie">
+  <span>Мы используем файлы cookie, чтобы сайт работал корректно. Оставаясь на сайте, вы соглашаетесь с
+    <a href="policy.html" style="color:var(--gold-d);font-weight:700">Политикой конфиденциальности</a>.</span>
+  <button class="btn" id="cookieOk">Принять</button>
+</div>
+
+<script>
+var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+burger.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open');});
+
+/* форма пока без бэкенда. Чтобы заявки приходили на почту:
+   <form action="https://formspree.io/f/ТВОЙ_ID" method="POST"> и убрать e.preventDefault() */
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nm=document.getElementById('nm').value.trim();
+  var ph=document.getElementById('ph').value.trim();
+  var ok=document.getElementById('agree').checked;
+  var err=document.getElementById('err');
+  if(!nm||ph.length<5||!ok){err.style.display='block';return;}
+  err.style.display='none';
+  document.getElementById('done').style.display='block';
+  this.querySelector('button[type=submit]').disabled=true;
+});
+
+try{ if(!localStorage.getItem('cookie_ok')) document.getElementById('cookie').classList.add('show'); }
+catch(e){ document.getElementById('cookie').classList.add('show'); }
+document.getElementById('cookieOk').addEventListener('click',function(){
+  document.getElementById('cookie').classList.remove('show');
+  try{localStorage.setItem('cookie_ok','1');}catch(e){}
+});
+</script>
+
+<!-- Яндекс.Метрика: заменить 00000000 на номер счётчика клиента -->
+<script>
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(00000000,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+</script>
+</body>
+</html>
